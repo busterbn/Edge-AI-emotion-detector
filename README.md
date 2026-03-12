@@ -101,6 +101,7 @@ This:
 ### 5. Build and flash firmware
 
 ```bash
+deactivate
 cd firmware
 source ~/esp/esp-idf/export.sh
 idf.py set-target esp32s3
