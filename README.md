@@ -46,9 +46,9 @@ FER2013 dataset → train_tiny_model.py → tiny_model.h5
 ### 1. Install Python dependencies
 
 ```bash
-python3 -m venv .venv
+uv venv --python 3.11
 source .venv/bin/activate
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### 2. Train the model
