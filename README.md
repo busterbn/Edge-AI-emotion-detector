@@ -51,7 +51,34 @@ source .venv/bin/activate
 uv pip install -r requirements.txt
 ```
 
-### 2. Train the model
+### 2. Download the dataset
+
+The model expects the FER2013 dataset. Download it using the Kaggle CLI (included in requirements):
+
+```bash
+kaggle datasets download -d jonathanoheix/face-expression-recognition-dataset
+unzip face-expression-recognition-dataset.zip -d ../../input/face-expression-recognition-dataset
+rm face-expression-recognition-dataset.zip
+```
+
+This creates the expected directory structure:
+```
+../../input/face-expression-recognition-dataset/images/
+├── train/
+│   ├── angry/
+│   ├── disgust/
+│   ├── fear/
+│   ├── happy/
+│   ├── neutral/
+│   ├── sad/
+│   └── surprise/
+└── validation/
+    └── (same subdirectories)
+```
+
+> **Note:** You need a Kaggle account and API token (`~/.kaggle/kaggle.json`). See [Kaggle API docs](https://github.com/Kaggle/kaggle-api#api-credentials).
+
+### 3. Train the model
 
 ```bash
 python train_tiny_model.py
@@ -59,7 +86,7 @@ python train_tiny_model.py
 
 This trains a ~21K parameter CNN with data augmentation. Outputs `tiny_model.h5` with best validation accuracy (~53%).
 
-### 3. Convert to TFLite and generate C header
+### 4. Convert to TFLite and generate C header
 
 ```bash
 python convert_tflite.py
@@ -71,7 +98,7 @@ This:
 - Saves `tiny_model.tflite` (~39KB)
 - Generates `firmware/main/model_data.h` (model weights as C byte array)
 
-### 4. Build and flash firmware
+### 5. Build and flash firmware
 
 ```bash
 cd firmware
