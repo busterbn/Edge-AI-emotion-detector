@@ -4,3 +4,4 @@ dataset/
 __pycache__/
 *.h5
 *.tflite
+firmware/main/model_data.h
