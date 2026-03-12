@@ -38,7 +38,7 @@ FER2013 dataset → train_tiny_model.py → tiny_model.h5
 
 - Python 3.11+
 - [ESP-IDF v5.5+](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/)
-- FER2013 dataset at `../../input/face-expression-recognition-dataset/images/` (relative to this directory), with `train/` and `validation/` subdirectories containing class folders (Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise)
+- FER2013 dataset at `dataset/images/` (relative to this directory), with `train/` and `validation/` subdirectories containing class folders (Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise)
 - ESP32-S3 board with camera module and PSRAM
 
 ## Setup
@@ -57,13 +57,13 @@ The model expects the FER2013 dataset. Download it using the Kaggle CLI (include
 
 ```bash
 kaggle datasets download -d jonathanoheix/face-expression-recognition-dataset
-unzip face-expression-recognition-dataset.zip -d ../../input/face-expression-recognition-dataset
+unzip face-expression-recognition-dataset.zip -d dataset
 rm face-expression-recognition-dataset.zip
 ```
 
 This creates the expected directory structure:
 ```
-../../input/face-expression-recognition-dataset/images/
+dataset/images/
 ├── train/
 │   ├── angry/
 │   ├── disgust/

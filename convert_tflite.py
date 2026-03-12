@@ -7,8 +7,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(SCRIPT_DIR, 'tiny_model.h5')
 TFLITE_PATH = os.path.join(SCRIPT_DIR, 'tiny_model.tflite')
 HEADER_PATH = os.path.join(SCRIPT_DIR, 'firmware', 'main', 'model_data.h')
-DATASET_PATH = os.path.join(SCRIPT_DIR, '..', '..', 'input',
-                             'face-expression-recognition-dataset', 'images')
+DATASET_PATH = os.path.join(SCRIPT_DIR, 'dataset', 'images')
 
 PICTURE_SIZE = 48
 NUM_CALIBRATION_SAMPLES = 200

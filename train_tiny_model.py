@@ -12,8 +12,7 @@ from tf_keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
 
 # Paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(SCRIPT_DIR, '..', '..', 'input',
-                             'face-expression-recognition-dataset', 'images')
+DATASET_PATH = os.path.join(SCRIPT_DIR, 'dataset', 'images')
 TEACHER_PATH = os.path.join(SCRIPT_DIR, '..', 'model.h5')
 OUTPUT_PATH = os.path.join(SCRIPT_DIR, 'tiny_model.h5')
 

@@ -1,0 +1,6 @@
+dataset/
+*.zip
+.venv/
+__pycache__/
+*.h5
+*.tflite
