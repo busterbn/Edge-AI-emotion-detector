@@ -5,3 +5,5 @@ __pycache__/
 *.h5
 *.tflite
 firmware/main/model_data.h
+firmware/build/
+firmware/managed_components/
